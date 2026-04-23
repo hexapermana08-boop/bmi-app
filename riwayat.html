@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>HealthSync | History</title>
+  <link rel="website icon" type="image/webp" href="img/l1.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-logo">
+    <img src="img/l1.webp" alt="Logo BMI">
+    <span class="logo-text">HealthSync</span>
+  </div>
+  <a href="index.html">
+    <span>🏠</span>
+    <p>Home</p>
+  </a>
+  <a href="kalkulator.html">
+    <span>🧮</span>
+    <p>Calculator</p>
+  </a>
+  <a href="riwayat.html" class="active">
+    <span>📊</span>
+    <p>History</p>
+  </a>
+  <button id="toggleModeSidebar" aria-label="Toggle Dark Mode">🌙</button>
+</div>
+
+<div class="main-content">
+  <div class="history-header">
+    <h1>Riwayat BMI</h1>
+    <p class="subtitle">Data perhitungan BMI yang telah disimpan</p>
+  </div>
+
+  <div class="history-actions">
+    <button onclick="hapusSemua()" class="btn-hapus-semua">
+      🗑️Hapus Semua
+    </button>
+    <span id="jumlahData" class="jumlah-badge">0 Data</span>
+  </div>
+
+  <div id="emptyState" class="empty-state" style="display: none;">
+    <span>📭</span>
+    <p>Belum ada data riwayat</p>
+    <small>Silakan hitung BMI di halaman Calculator</small>
+  </div>
+
+  <ul id="listRiwayat" class="riwayat-list"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

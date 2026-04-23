@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>HealthSync | Calculator</title>
+  <link rel="website icon" type="image/webp" href="img/l1.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-logo">
+    <img src="img/l1.webp" alt="Logo BMI">
+    <span class="logo-text">HealthSync</span>
+  </div>
+  <a href="index.html">
+    <span>🏠</span>
+    <p>Home</p>
+  </a>
+  <a href="kalkulator.html" class="active">
+    <span>🧮</span>
+    <p>Calculator</p>
+  </a>
+  <a href="riwayat.html">
+    <span>📊</span>
+    <p>History</p>
+  </a>
+  <button id="toggleModeSidebar" aria-label="Toggle Dark Mode">🌙</button>
+</div>
+
+<div class="main-content">
+  <div class="hero-section">
+    <img src="img/l1.webp" alt="Logo" class="hero-logo">
+    <h1>Kalkulator BMI</h1>
+    <p class="subtitle">Masukkan data dirimu untuk mengetahui BMI</p>
+  </div>
+
+  <div class="form-card">
+    <div class="form-group">
+      <input type="text" id="nama" placeholder="Nama Lengkap" autocomplete="off">
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group">
+        <input type="number" id="umur" placeholder="Umur (tahun)" min="1" max="120">
+      </div>
+      <div class="form-group">
+        <select id="gender">
+          <option value="" disabled selected>Pilih Gender</option>
+          <option value="Laki-laki">👨 Laki-laki</option>
+          <option value="Perempuan">👩 Perempuan</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <input type="number" id="tinggi" placeholder="Tinggi (cm)" step="1" min="50" max="250">
+      </div>
+      <div class="form-group">
+        <input type="number" id="berat" placeholder="Berat (kg)" step="0.1" min="10" max="300">
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button onclick="hitungBMI()" class="btn-hitung">
+        <span>⚡</span>Hitung BMI
+      </button>
+      <button onclick="simpanKeRiwayat()" class="btn-simpan" id="btnSimpan" disabled>
+        <span>💾</span>Simpan Data
+      </button>
+    </div>
+  </div>
+
+  <div id="hasil" class="hasil-card" style="display: none;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
