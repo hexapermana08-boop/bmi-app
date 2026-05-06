@@ -2,39 +2,34 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>HealthSync | Home</title>
   <link rel="icon" type="image/webp" href="img/l1.webp">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="light">
+<body>
 
-<div class="status-bar">
-  <span>9:41</span>
-  <span>📶 🔋</span>
+<div class="header">
+  <div class="logo">
+    <img src="img/l1.webp" alt="Logo" class="logo-img">
+    <span class="logo-text">HealthSync</span>
+  </div>
+  <button onclick="toggleTheme()" style="background: none; border: none; font-size: 24px; cursor: pointer;">🌙</button>
 </div>
 
-<div class="user-section" id="userSection"></div>
-
-<div class="main-content">
-  <div class="hero">
-    <img src="img/l1.webp" alt="Logo" class="hero-logo">
-    <h1>Apa itu BMI?</h1>
-  </div>
-
-  <div id="dailyQuote" class="daily-quote"></div>
-
+<div class="container">
   <div class="glass-card">
-    <p><strong>BMI (Body Mass Index)</strong> atau Indeks Massa Tubuh adalah alat screening sederhana untuk mengetahui apakah berat badan seseorang ideal atau tidak berdasarkan tinggi dan berat badannya.</p>
+    <h2 style="margin-bottom: 12px;">Apa itu BMI?</h2>
+    <p><strong>Body Mass Index (BMI)</strong> adalah alat screening sederhana untuk mengetahui apakah berat badan Anda ideal atau tidak berdasarkan tinggi dan berat badan.</p>
   </div>
 
   <div class="glass-card">
     <h2 style="margin-bottom: 16px;">📋 Kategori BMI</h2>
     <ul class="bmi-list">
-      <li class="underweight"><div class="category-header"><span class="badge">💙 Kurus</span><span>&lt; 18.5</span></div><div class="rekomendasi">📝 Perbanyak protein, karbohidrat kompleks, olahraga ringan</div></li>
-      <li class="normal"><div class="category-header"><span class="badge">💚 Normal</span><span>18.5 - 24.9</span></div><div class="rekomendasi">📝 Pertahankan! Pola makan seimbang, olahraga rutin</div></li>
-      <li class="overweight"><div class="category-header"><span class="badge">🧡 Gemuk</span><span>25 - 29.9</span></div><div class="rekomendasi">📝 Kurangi gula & lemak, perbanyak sayur dan buah</div></li>
-      <li class="obese"><div class="category-header"><span class="badge">❤️ Obesitas</span><span>≥ 30</span></div><div class="rekomendasi">📝 Konsultasi dokter gizi, kurangi porsi makan</div></li>
+      <li class="bmi-item"><div class="bmi-header"><span>💙 Kurus</span><span>&lt; 18.5</span></div><div class="bmi-rekomendasi">Perbanyak protein, karbohidrat kompleks, olahraga ringan</div></li>
+      <li class="bmi-item"><div class="bmi-header"><span>💚 Normal</span><span>18.5 - 24.9</span></div><div class="bmi-rekomendasi">Pertahankan! Pola makan seimbang, olahraga rutin</div></li>
+      <li class="bmi-item"><div class="bmi-header"><span>🧡 Gemuk</span><span>25 - 29.9</span></div><div class="bmi-rekomendasi">Kurangi gula & lemak, perbanyak sayur dan buah</div></li>
+      <li class="bmi-item"><div class="bmi-header"><span>❤️ Obesitas</span><span>≥ 30</span></div><div class="bmi-rekomendasi">Konsultasi dokter gizi, kurangi porsi makan</div></li>
     </ul>
   </div>
 
@@ -48,8 +43,6 @@
   <a href="index.html" class="nav-item active"><span>🏠</span><span>Home</span></a>
   <a href="kalkulator.html" class="nav-item"><span>🧮</span><span>Kalkulator</span></a>
   <a href="riwayat.html" class="nav-item"><span>📊</span><span>Riwayat</span></a>
-  <a href="panduan.html" class="nav-item"><span>📖</span><span>Panduan</span></a>
-  <a href="artikel.html" class="nav-item"><span>📰</span><span>Artikel</span></a>
 </div>
 
 <script src="script.js"></script>
