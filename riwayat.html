@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
   <title>HealthSync | Riwayat</title>
   <link rel="icon" type="image/webp" href="img/l1.webp">
   <link rel="stylesheet" href="style.css">
@@ -14,21 +14,22 @@
     <img src="img/l1.webp" alt="Logo" class="logo-img">
     <span class="logo-text">HealthSync</span>
   </div>
-  <button onclick="toggleTheme()" style="background: none; border: none; font-size: 24px; cursor: pointer;">🌙</button>
+  <button onclick="toggleTheme()" class="theme-btn" id="themeToggleBtn">🌙</button>
 </div>
 
 <div class="container">
   <div class="glass-card">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-      <h2>Riwayat BMI</h2>
+    <div class="history-header">
+      <h2 style="font-size: 22px;">📜 Riwayat BMI</h2>
       <button onclick="hapusSemua()" class="btn btn-outline" style="padding: 8px 16px;">🗑️ Hapus Semua</button>
     </div>
-    <div id="jumlahData" style="margin-bottom: 16px; font-size: 13px; opacity:0.7;">0 data</div>
+    
+    <div id="jumlahData" class="badge-count" style="display: inline-block; margin-bottom: 20px;">0 data</div>
     
     <div id="emptyState" class="empty-state" style="display: none;">
       <span>📭</span>
-      <p>Belum ada data riwayat</p>
-      <small>Silakan hitung BMI di Kalkulator</small>
+      <p style="margin-top: 12px;">Belum ada data riwayat</p>
+      <small style="opacity: 0.6;">Silakan hitung BMI di halaman Kalkulator</small>
     </div>
     
     <ul id="listRiwayat" class="riwayat-list"></ul>
@@ -39,6 +40,8 @@
   <a href="index.html" class="nav-item"><span>🏠</span><span>Home</span></a>
   <a href="kalkulator.html" class="nav-item"><span>🧮</span><span>Kalkulator</span></a>
   <a href="riwayat.html" class="nav-item active"><span>📊</span><span>Riwayat</span></a>
+  <a href="panduan.html" class="nav-item"><span>📖</span><span>Panduan</span></a>
+  <a href="artikel.html" class="nav-item"><span>📰</span><span>Artikel</span></a>
 </div>
 
 <script src="script.js"></script>
