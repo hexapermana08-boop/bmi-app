@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>HealthSync | Login</title>
+  <link rel="icon" type="image/webp" href="img/l1.webp">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-container { max-width: 400px; margin: 0 auto; padding-top: 40px; }
+    .back-link { text-align: center; margin-top: 20px; }
+    .back-link a { color: var(--apple-blue); text-decoration: none; }
+  </style>
+</head>
+<body class="light">
+
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+
+<div class="main-content">
+  <div class="login-container">
+    <div class="hero"><img src="img/l1.webp" alt="Logo" class="hero-logo"><h1>Masuk</h1><p class="subtitle">Selamat datang kembali!</p></div>
+
+    <div class="glass-card">
+      <div class="form-group"><input type="email" id="loginEmail" placeholder="Email"></div>
+      <div class="form-group"><input type="password" id="loginPassword" placeholder="Password"></div>
+      <button onclick="doLogin()" class="btn btn-primary">Masuk</button>
+      <div class="back-link"><a href="registrasi.html">Belum punya akun? Daftar</a></div>
+      <div class="back-link"><a href="index.html">← Kembali ke Beranda</a></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function doLogin() {
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginPassword').value;
+  if (!email || !password) return alert('Isi email dan password!');
+  
+  const users = JSON.parse(localStorage.getItem('users')) || [];
+  const user = users.find(u => u.email === email && u.password === password);
+  if (user) {
+    localStorage.setItem('currentUser', JSON.stringify({ nama: user.nama, email: user.email }));
+    alert('Login berhasil!');
+    window.location.href = 'index.html';
+  } else {
+    alert('Email atau password salah!');
+  }
+}
+</script>
+</body>
+</html>
