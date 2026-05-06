@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>HealthSync | Tentang</title>
+  <link rel="icon" type="image/webp" href="img/l1.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div class="user-section" id="userSection"></div>
+
+<div class="main-content">
+  <div class="hero">
+    <img src="img/l1.webp" alt="Logo" class="hero-logo">
+    <h1>Tentang HealthSync</h1>
+    <div class="app-version">Versi 2.0.0</div>
+  </div>
+
+  <div class="glass-card">
+    <h2>📱 Aplikasi HealthSync</h2>
+    <p style="margin-top: 8px; line-height: 1.6;">HealthSync adalah aplikasi kesehatan yang membantu Anda memantau indeks massa tubuh (BMI), kebutuhan kalori harian (BMR), dan menyediakan berbagai informasi kesehatan untuk mendukung gaya hidup sehat Anda.</p>
+  </div>
+
+  <div class="glass-card">
+    <h2>⚙️ Pengaturan Tema</h2>
+    <div class="theme-selector">
+      <div class="theme-option" data-theme="light" onclick="setThemeMode('light')">☀️ Terang</div>
+      <div class="theme-option" data-theme="dark" onclick="setThemeMode('dark')">🌙 Gelap</div>
+      <div class="theme-option" data-theme="auto" onclick="setThemeMode('auto')">🔄 Otomatis</div>
+    </div>
+  </div>
+
+  <div class="glass-card">
+    <h2>🔒 Keamanan Data</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <span>Reset semua data (hapus riwayat)</span>
+      <button onclick="openResetModal()" class="btn btn-outline" style="padding: 8px 16px; width: auto;">🗑️ Reset Data</button>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 12px;">
+      <span>Ubah PIN Reset Data</span>
+      <button onclick="openChangePinModal()" class="btn btn-outline" style="padding: 8px 16px; width: auto;">🔐 Ubah PIN</button>
+    </div>
+  </div>
+
+  <div class="glass-card">
+    <h2>✨ Fitur Lengkap</h2>
+    <ul class="feature-list">
+      <li><span>📊</span> Kalkulator BMI dengan rekomendasi</li>
+      <li><span>🔥</span> Kalkulator BMR & kebutuhan kalori</li>
+      <li><span>📜</span> Riwayat perhitungan tersimpan</li>
+      <li><span>📖</span> Panduan penggunaan lengkap</li>
+      <li><span>📰</span> Artikel kesehatan informatif</li>
+      <li><span>🌙</span> Dark/Light/Auto mode</li>
+      <li><span>💾</span> Data tersimpan di localStorage</li>
+      <li><span>📱</span> Responsif mobile & desktop</li>
+    </ul>
+  </div>
+
+  <div class="glass-card">
+    <h2>👨‍💻 Pengembang</h2>
+    <p style="margin-top: 8px;">Dibuat dengan ❤️ untuk membantu masyarakat hidup lebih sehat.<br>Email: support@healthsync.com<br>Instagram: @healthsync</p>
+  </div>
+
+  <div class="glass-card">
+    <h2>📝 Catatan Penting</h2>
+    <p style="font-size: 12px; opacity: 0.7;">Aplikasi ini hanya untuk tujuan edukasi dan bukan pengganti saran medis profesional. Selalu konsultasikan dengan dokter atau ahli gizi untuk penilaian kesehatan yang akurat.</p>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="index.html" class="nav-item"><span>🏠</span><span>Home</span></a>
+  <a href="kalkulator.html" class="nav-item"><span>🧮</span><span>Kalkulator</span></a>
+  <a href="riwayat.html" class="nav-item"><span>📊</span><span>Riwayat</span></a>
+  <a href="bmr.html" class="nav-item"><span>🔥</span><span>BMR</span></a>
+  <a href="about.html" class="nav-item active"><span>ℹ️</span><span>Tentang</span></a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
