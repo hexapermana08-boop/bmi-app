@@ -2,53 +2,42 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>HealthSync | History</title>
-  <link rel="website icon" type="image/webp" href="img/l1.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>HealthSync | Riwayat</title>
+  <link rel="icon" type="image/webp" href="img/l1.webp">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light">
 
-<div class="sidebar">
-  <div class="sidebar-logo">
-    <img src="img/l1.webp" alt="Logo BMI">
-    <span class="logo-text">HealthSync</span>
-  </div>
-  <a href="index.html">
-    <span>🏠</span>
-    <p>Home</p>
-  </a>
-  <a href="kalkulator.html">
-    <span>🧮</span>
-    <p>Calculator</p>
-  </a>
-  <a href="riwayat.html" class="active">
-    <span>📊</span>
-    <p>History</p>
-  </a>
-  <button id="toggleModeSidebar" aria-label="Toggle Dark Mode">🌙</button>
-</div>
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div class="user-section" id="userSection"></div>
 
 <div class="main-content">
-  <div class="history-header">
+  <div class="hero">
+    <img src="img/l1.webp" alt="Logo" class="hero-logo">
     <h1>Riwayat BMI</h1>
-    <p class="subtitle">Data perhitungan BMI yang telah disimpan</p>
+    <p class="subtitle">Data perhitungan yang tersimpan</p>
   </div>
 
-  <div class="history-actions">
-    <button onclick="hapusSemua()" class="btn-hapus-semua">
-      🗑️Hapus Semua
-    </button>
-    <span id="jumlahData" class="jumlah-badge">0 Data</span>
+  <div class="history-actions" style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+    <button onclick="hapusSemua()" class="btn btn-outline">🗑️ Hapus Semua</button>
+    <span id="jumlahData" class="jumlah-badge" style="background: var(--gradient-primary); padding: 6px 16px; border-radius: 30px;">0 Data</span>
   </div>
 
   <div id="emptyState" class="empty-state" style="display: none;">
-    <span>📭</span>
-    <p>Belum ada data riwayat</p>
-    <small>Silakan hitung BMI di halaman Calculator</small>
+    <span>📭</span><p>Belum ada data riwayat</p><small>Silakan hitung BMI di Kalkulator</small>
   </div>
 
   <ul id="listRiwayat" class="riwayat-list"></ul>
+  <div id="chartContainer" class="chart-container"><canvas id="bmiChart"></canvas></div>
+</div>
+
+<div class="bottom-nav">
+  <a href="index.html" class="nav-item"><span>🏠</span><span>Home</span></a>
+  <a href="kalkulator.html" class="nav-item"><span>🧮</span><span>Kalkulator</span></a>
+  <a href="riwayat.html" class="nav-item active"><span>📊</span><span>Riwayat</span></a>
+  <a href="panduan.html" class="nav-item"><span>📖</span><span>Panduan</span></a>
+  <a href="artikel.html" class="nav-item"><span>📰</span><span>Artikel</span></a>
 </div>
 
 <script src="script.js"></script>
