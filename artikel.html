@@ -7,46 +7,50 @@
   <link rel="icon" type="image/webp" href="img/l1.webp">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="light">
+<body>
 
-<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
-<div class="user-section" id="userSection"></div>
-
-<div class="main-content">
-  <div class="hero">
-    <img src="img/l1.webp" alt="Logo" class="hero-logo">
-    <h1>Artikel Kesehatan</h1>
-    <p class="subtitle">Tips dan informasi untuk hidup sehat</p>
+<div class="header">
+  <div class="logo">
+    <img src="img/l1.webp" alt="Logo" class="logo-img">
+    <span class="logo-text">HealthSync</span>
   </div>
+  <button onclick="toggleTheme()" class="theme-btn" id="themeToggleBtn">🌙</button>
+</div>
 
-  <div class="article-card" onclick="showArticleModal('Pola Makan Seimbang', '🍽️ Konsumsilah makanan dengan gizi seimbang: karbohidrat, protein, lemak sehat, vitamin, dan mineral. Hindari makanan olahan dan perbanyak sayur serta buah-buahan segar.')">
-    <h4>🥗 Pola Makan Seimbang</h4>
-    <p>Kunci hidup sehat dimulai dari piring makan Anda</p>
-  </div>
-
-  <div class="article-card" onclick="showArticleModal('Olahraga Rutin', '🏃 Lakukan olahraga minimal 30 menit setiap hari. Jalan kaki, bersepeda, atau berenang adalah pilihan yang baik untuk memulai.')">
-    <h4>🏃 Olahraga Rutin</h4>
-    <p>Gerakan teratur untuk tubuh yang bugar</p>
-  </div>
-
-  <div class="article-card" onclick="showArticleModal('Tidur Cukup', '😴 Tidur 7-8 jam per hari membantu regenerasi sel dan menjaga kesehatan mental. Kurang tidur dapat memicu berbagai penyakit.')">
-    <h4>😴 Tidur Cukup</h4>
-    <p>Istirahat berkualitas untuk kesehatan optimal</p>
-  </div>
-
-  <div class="article-card" onclick="showArticleModal('Manajemen Stres', '🧘 Stres berlebih dapat mempengaruhi kesehatan fisik dan mental. Coba meditasi, yoga, atau hobi yang menyenangkan.')">
-    <h4>🧘 Manajemen Stres</h4>
-    <p>Jaga kesehatan mental dengan mengelola stres</p>
-  </div>
-
-  <div class="article-card" onclick="showArticleModal('Minum Air Putih', '💧 Setidaknya 8 gelas air putih per hari membantu metabolisme dan menjaga hidrasi tubuh.')">
-    <h4>💧 Minum Air Putih</h4>
-    <p>Hidrasi yang cukup untuk tubuh sehat</p>
-  </div>
-
-  <div class="article-card" onclick="showArticleModal('Cek Kesehatan Rutin', '🏥 Periksakan kesehatan secara rutin setiap 6 bulan untuk deteksi dini penyakit.')">
-    <h4>🏥 Cek Kesehatan Rutin</h4>
-    <p>Pencegahan lebih baik daripada mengobati</p>
+<div class="container">
+  <div class="glass-card">
+    <h2 style="margin-bottom: 8px;">📰 Artikel Kesehatan</h2>
+    <p style="margin-bottom: 24px; opacity: 0.7;">Tips dan informasi untuk hidup sehat</p>
+    
+    <div class="article-item" onclick="showArticleModal('Pola Makan Seimbang', '🥗 Konsumsilah makanan dengan gizi seimbang: karbohidrat, protein, lemak sehat, vitamin, dan mineral. Hindari makanan olahan dan perbanyak sayur serta buah-buahan segar.')">
+      <h3 style="color: var(--primary); margin-bottom: 4px;">🥗 Pola Makan Seimbang</h3>
+      <p style="font-size: 13px; opacity: 0.7;">Kunci hidup sehat dimulai dari piring makan Anda</p>
+    </div>
+    
+    <div class="article-item" onclick="showArticleModal('Olahraga Rutin', '🏃 Lakukan olahraga minimal 30 menit setiap hari. Jalan kaki, bersepeda, atau berenang adalah pilihan yang baik untuk memulai kesehatan Anda.')">
+      <h3 style="color: var(--primary); margin-bottom: 4px;">🏃 Olahraga Rutin</h3>
+      <p style="font-size: 13px; opacity: 0.7;">Gerakan teratur untuk tubuh yang bugar</p>
+    </div>
+    
+    <div class="article-item" onclick="showArticleModal('Tidur Cukup', '😴 Tidur 7-8 jam per hari membantu regenerasi sel dan menjaga kesehatan mental. Kurang tidur dapat memicu berbagai penyakit kronis.')">
+      <h3 style="color: var(--primary); margin-bottom: 4px;">😴 Tidur Cukup</h3>
+      <p style="font-size: 13px; opacity: 0.7;">Istirahat berkualitas untuk kesehatan optimal</p>
+    </div>
+    
+    <div class="article-item" onclick="showArticleModal('Manajemen Stres', '🧘 Stres berlebih dapat mempengaruhi kesehatan fisik dan mental. Coba meditasi, yoga, atau hobi yang menyenangkan untuk relaksasi.')">
+      <h3 style="color: var(--primary); margin-bottom: 4px;">🧘 Manajemen Stres</h3>
+      <p style="font-size: 13px; opacity: 0.7;">Jaga kesehatan mental dengan mengelola stres</p>
+    </div>
+    
+    <div class="article-item" onclick="showArticleModal('Minum Air Putih', '💧 Setidaknya 8 gelas air putih per hari membantu metabolisme dan menjaga hidrasi tubuh agar berfungsi optimal.')">
+      <h3 style="color: var(--primary); margin-bottom: 4px;">💧 Minum Air Putih</h3>
+      <p style="font-size: 13px; opacity: 0.7;">Hidrasi yang cukup untuk tubuh sehat</p>
+    </div>
+    
+    <div class="article-item" onclick="showArticleModal('Cek Kesehatan Rutin', '🏥 Periksakan kesehatan secara rutin setiap 6 bulan untuk deteksi dini penyakit. Pencegahan lebih baik daripada mengobati.')">
+      <h3 style="color: var(--primary); margin-bottom: 4px;">🏥 Cek Kesehatan Rutin</h3>
+      <p style="font-size: 13px; opacity: 0.7;">Deteksi dini untuk hidup lebih sehat</p>
+    </div>
   </div>
 </div>
 
@@ -59,10 +63,5 @@
 </div>
 
 <script src="script.js"></script>
-<script>
-function showArticleModal(title, content) {
-  showBottomSheet(title, `<p>${content}</p><button class="btn btn-primary" style="margin-top:20px" onclick="closeBottomSheet()">Tutup</button>`);
-}
-</script>
 </body>
 </html>
