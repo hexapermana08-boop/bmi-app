@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>HealthSync | Daftar</title>
+  <link rel="icon" type="image/webp" href="img/l1.webp">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .register-container { max-width: 400px; margin: 0 auto; padding-top: 40px; }
+    .back-link { text-align: center; margin-top: 20px; }
+    .back-link a { color: var(--apple-blue); text-decoration: none; }
+  </style>
+</head>
+<body class="light">
+
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+
+<div class="main-content">
+  <div class="register-container">
+    <div class="hero"><img src="img/l1.webp" alt="Logo" class="hero-logo"><h1>Daftar Akun</h1><p class="subtitle">Mulai perjalanan sehatmu</p></div>
+
+    <div class="glass-card">
+      <div class="form-group"><input type="text" id="regNama" placeholder="Nama Lengkap"></div>
+      <div class="form-group"><input type="email" id="regEmail" placeholder="Email"></div>
+      <div class="form-group"><input type="password" id="regPassword" placeholder="Password"></div>
+      <div class="form-group"><input type="password" id="regConfirm" placeholder="Konfirmasi Password"></div>
+      <button onclick="doRegister()" class="btn btn-primary">Daftar</button>
+      <div class="back-link"><a href="login.html">Sudah punya akun? Masuk</a></div>
+      <div class="back-link"><a href="index.html">← Kembali ke Beranda</a></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function doRegister() {
+  const nama = document.getElementById('regNama').value.trim();
+  const email = document.getElementById('regEmail').value.trim();
+  const password = document.getElementById('regPassword').value;
+  const confirm = document.getElementById('regConfirm').value;
+  
+  if (!nama || !email || !password) return alert('Isi semua data!');
+  if (password !== confirm) return alert('Password tidak cocok!');
+  if (password.length < 4) return alert('Password minimal 4 karakter!');
+  
+  const users = JSON.parse(localStorage.getItem('users')) || [];
+  if (users.find(u => u.email === email)) return alert('Email sudah terdaftar!');
+  
+  users.push({ nama, email, password });
+  localStorage.setItem('users', JSON.stringify(users));
+  alert('Pendaftaran berhasil! Silakan login.');
+  window.location.href = 'login.html';
+}
+</script>
+</body>
+</html>

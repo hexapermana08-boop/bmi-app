@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>HealthSync | Artikel</title>
+  <link rel="icon" type="image/webp" href="img/l1.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div class="user-section" id="userSection"></div>
+
+<div class="main-content">
+  <div class="hero">
+    <img src="img/l1.webp" alt="Logo" class="hero-logo">
+    <h1>Artikel Kesehatan</h1>
+    <p class="subtitle">Tips dan informasi untuk hidup sehat</p>
+  </div>
+
+  <div class="article-card" onclick="showArticleModal('Pola Makan Seimbang', '🍽️ Konsumsilah makanan dengan gizi seimbang: karbohidrat, protein, lemak sehat, vitamin, dan mineral. Hindari makanan olahan dan perbanyak sayur serta buah-buahan segar.')">
+    <h4>🥗 Pola Makan Seimbang</h4>
+    <p>Kunci hidup sehat dimulai dari piring makan Anda</p>
+  </div>
+
+  <div class="article-card" onclick="showArticleModal('Olahraga Rutin', '🏃 Lakukan olahraga minimal 30 menit setiap hari. Jalan kaki, bersepeda, atau berenang adalah pilihan yang baik untuk memulai.')">
+    <h4>🏃 Olahraga Rutin</h4>
+    <p>Gerakan teratur untuk tubuh yang bugar</p>
+  </div>
+
+  <div class="article-card" onclick="showArticleModal('Tidur Cukup', '😴 Tidur 7-8 jam per hari membantu regenerasi sel dan menjaga kesehatan mental. Kurang tidur dapat memicu berbagai penyakit.')">
+    <h4>😴 Tidur Cukup</h4>
+    <p>Istirahat berkualitas untuk kesehatan optimal</p>
+  </div>
+
+  <div class="article-card" onclick="showArticleModal('Manajemen Stres', '🧘 Stres berlebih dapat mempengaruhi kesehatan fisik dan mental. Coba meditasi, yoga, atau hobi yang menyenangkan.')">
+    <h4>🧘 Manajemen Stres</h4>
+    <p>Jaga kesehatan mental dengan mengelola stres</p>
+  </div>
+
+  <div class="article-card" onclick="showArticleModal('Minum Air Putih', '💧 Setidaknya 8 gelas air putih per hari membantu metabolisme dan menjaga hidrasi tubuh.')">
+    <h4>💧 Minum Air Putih</h4>
+    <p>Hidrasi yang cukup untuk tubuh sehat</p>
+  </div>
+
+  <div class="article-card" onclick="showArticleModal('Cek Kesehatan Rutin', '🏥 Periksakan kesehatan secara rutin setiap 6 bulan untuk deteksi dini penyakit.')">
+    <h4>🏥 Cek Kesehatan Rutin</h4>
+    <p>Pencegahan lebih baik daripada mengobati</p>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="index.html" class="nav-item"><span>🏠</span><span>Home</span></a>
+  <a href="kalkulator.html" class="nav-item"><span>🧮</span><span>Kalkulator</span></a>
+  <a href="riwayat.html" class="nav-item"><span>📊</span><span>Riwayat</span></a>
+  <a href="panduan.html" class="nav-item"><span>📖</span><span>Panduan</span></a>
+  <a href="artikel.html" class="nav-item active"><span>📰</span><span>Artikel</span></a>
+</div>
+
+<script src="script.js"></script>
+<script>
+function showArticleModal(title, content) {
+  showBottomSheet(title, `<p>${content}</p><button class="btn btn-primary" style="margin-top:20px" onclick="closeBottomSheet()">Tutup</button>`);
+}
+</script>
+</body>
+</html>

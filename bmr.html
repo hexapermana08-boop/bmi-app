@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>HealthSync | Kalkulator BMR</title>
+  <link rel="icon" type="image/webp" href="img/l1.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div class="user-section" id="userSection"></div>
+
+<div class="main-content">
+  <div class="hero">
+    <img src="img/l1.webp" alt="Logo" class="hero-logo">
+    <h1>Kalkulator BMR</h1>
+    <p class="subtitle">Hitung kebutuhan kalori harianmu</p>
+  </div>
+
+  <div class="glass-card">
+    <div class="form-row">
+      <div class="form-group">
+        <select id="bmrGender">
+          <option value="" disabled selected>Pilih Gender</option>
+          <option value="Laki-laki">👨 Laki-laki</option>
+          <option value="Perempuan">👩 Perempuan</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="number" id="bmrAge" placeholder="Umur (tahun)">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <input type="number" id="bmrWeight" placeholder="Berat Badan (kg)" step="0.1">
+      </div>
+      <div class="form-group">
+        <input type="number" id="bmrHeight" placeholder="Tinggi Badan (cm)">
+      </div>
+    </div>
+
+    <div style="margin: 16px 0;">
+      <div style="font-size: 13px; margin-bottom: 8px;">Tingkat Aktivitas</div>
+      <div class="activity-selector">
+        <div class="activity-btn active" onclick="setActivity('sedentary', this)">🏠 Kurang Aktif</div>
+        <div class="activity-btn" onclick="setActivity('light', this)">🚶 Ringan</div>
+        <div class="activity-btn" onclick="setActivity('moderate', this)">🏃 Sedang</div>
+        <div class="activity-btn" onclick="setActivity('active', this)">💪 Aktif</div>
+        <div class="activity-btn" onclick="setActivity('veryActive', this)">⚡ Sangat Aktif</div>
+      </div>
+    </div>
+
+    <button onclick="calculateBMR()" class="btn btn-primary">Hitung Kebutuhan Kalori</button>
+    <div id="bmrResult"></div>
+  </div>
+
+  <div class="glass-card">
+    <h3>📖 Apa itu BMR?</h3>
+    <p style="font-size: 13px; line-height: 1.5;">BMR (Basal Metabolic Rate) adalah jumlah kalori minimal yang dibutuhkan tubuh untuk bertahan hidup saat istirahat total. Mengetahui BMR membantu Anda mengatur asupan kalori harian untuk mencapai berat badan ideal.</p>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="index.html" class="nav-item"><span>🏠</span><span>Home</span></a>
+  <a href="kalkulator.html" class="nav-item"><span>🧮</span><span>Kalkulator</span></a>
+  <a href="riwayat.html" class="nav-item"><span>📊</span><span>Riwayat</span></a>
+  <a href="bmr.html" class="nav-item active"><span>🔥</span><span>BMR</span></a>
+  <a href="about.html" class="nav-item"><span>ℹ️</span><span>Tentang</span></a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
