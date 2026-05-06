@@ -2,85 +2,54 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
   <title>HealthSync | Home</title>
-  <link rel="website icon" type="image/webp" href="img/l1.webp">
+  <link rel="icon" type="image/webp" href="img/l1.webp">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light">
 
-<div class="sidebar">
-  <div class="sidebar-logo">
-    <img src="img/l1.webp" alt="Logo BMI">
-    <span class="logo-text">HealthSync</span>
-  </div>
-  <a href="index.html" class="active">
-    <span>🏠</span>
-    <p>Home</p>
-  </a>
-  <a href="kalkulator.html">
-    <span>🧮</span>
-    <p>Calculator</p>
-  </a>
-  <a href="riwayat.html">
-    <span>📊</span>
-    <p>History</p>
-  </a>
-  <button id="toggleModeSidebar" aria-label="Toggle Dark Mode">🌙</button>
+<div class="status-bar">
+  <span>9:41</span>
+  <span>📶 🔋</span>
 </div>
 
+<div class="user-section" id="userSection"></div>
+
 <div class="main-content">
-  <div class="hero-section">
+  <div class="hero">
     <img src="img/l1.webp" alt="Logo" class="hero-logo">
     <h1>Apa itu BMI?</h1>
   </div>
 
-  <!-- Teks penjelasan dipisah dengan card tersendiri -->
-  <div class="penjelasan-bmi">
-    <p><strong>BMI (Body Mass Index)</strong> atau Indeks Massa Tubuh adalah alat screening sederhana untuk mengetahui apakah berat badan seseorang ideal atau tidak berdasarkan tinggi dan berat badannya. BMI membantu mengidentifikasi potensi risiko kesehatan.</p>
+  <div id="dailyQuote" class="daily-quote"></div>
+
+  <div class="glass-card">
+    <p><strong>BMI (Body Mass Index)</strong> atau Indeks Massa Tubuh adalah alat screening sederhana untuk mengetahui apakah berat badan seseorang ideal atau tidak berdasarkan tinggi dan berat badannya.</p>
   </div>
 
-  <div class="info-card">
-    <h2>📋 Kategori BMI & Rekomendasi</h2>
-    <ul class="bmi-categories">
-      <li class="underweight">
-        <div class="category-header">
-          <span class="badge">💙 Kurus</span>
-          <span>&lt; 18.5</span>
-        </div>
-        <div class="rekomendasi">📝 <strong>Rekomendasi:</strong> Perbanyak protein (telur, ikan, daging), konsumsi karbohidrat kompleks, dan lakukan olahraga ringan untuk menambah massa otot.</div>
-      </li>
-      <li class="normal">
-        <div class="category-header">
-          <span class="badge">💚 Normal</span>
-          <span>18.5 - 24.9</span>
-        </div>
-        <div class="rekomendasi">📝 <strong>Rekomendasi:</strong> Pertahankan! Jaga pola makan seimbang, rutin olahraga 30 menit/hari, dan cukup istirahat.</div>
-      </li>
-      <li class="overweight">
-        <div class="category-header">
-          <span class="badge">🧡 Gemuk</span>
-          <span>25 - 29.9</span>
-        </div>
-        <div class="rekomendasi">📝 <strong>Rekomendasi:</strong> Kurangi gula & lemak jenuh, perbanyak sayur dan buah, jalan kaki 10.000 langkah/hari.</div>
-      </li>
-      <li class="obese">
-        <div class="category-header">
-          <span class="badge">❤️ Obesitas</span>
-          <span>≥ 30</span>
-        </div>
-        <div class="rekomendasi">📝 <strong>Rekomendasi:</strong> Konsultasi dengan dokter gizi, kurangi porsi makan, perbanyak aktivitas fisik, hindari makanan olahan.</div>
-      </li>
+  <div class="glass-card">
+    <h2 style="margin-bottom: 16px;">📋 Kategori BMI</h2>
+    <ul class="bmi-list">
+      <li class="underweight"><div class="category-header"><span class="badge">💙 Kurus</span><span>&lt; 18.5</span></div><div class="rekomendasi">📝 Perbanyak protein, karbohidrat kompleks, olahraga ringan</div></li>
+      <li class="normal"><div class="category-header"><span class="badge">💚 Normal</span><span>18.5 - 24.9</span></div><div class="rekomendasi">📝 Pertahankan! Pola makan seimbang, olahraga rutin</div></li>
+      <li class="overweight"><div class="category-header"><span class="badge">🧡 Gemuk</span><span>25 - 29.9</span></div><div class="rekomendasi">📝 Kurangi gula & lemak, perbanyak sayur dan buah</div></li>
+      <li class="obese"><div class="category-header"><span class="badge">❤️ Obesitas</span><span>≥ 30</span></div><div class="rekomendasi">📝 Konsultasi dokter gizi, kurangi porsi makan</div></li>
     </ul>
   </div>
 
-  <div class="info-card">
-    <h2>💡 Tips Kesehatan Umum</h2>
-    <p>• Minum air putih 8 gelas sehari<br>
-    • Tidur cukup 7-8 jam per hari<br>
-    • Hindari stres berlebihan<br>
-    • Periksa kesehatan rutin setiap 6 bulan</p>
+  <div class="glass-card">
+    <h2>💡 Tips Kesehatan</h2>
+    <p>• Minum air putih 8 gelas sehari<br>• Tidur cukup 7-8 jam<br>• Hindari stres berlebihan<br>• Periksa kesehatan rutin</p>
   </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="index.html" class="nav-item active"><span>🏠</span><span>Home</span></a>
+  <a href="kalkulator.html" class="nav-item"><span>🧮</span><span>Kalkulator</span></a>
+  <a href="riwayat.html" class="nav-item"><span>📊</span><span>Riwayat</span></a>
+  <a href="panduan.html" class="nav-item"><span>📖</span><span>Panduan</span></a>
+  <a href="artikel.html" class="nav-item"><span>📰</span><span>Artikel</span></a>
 </div>
 
 <script src="script.js"></script>
