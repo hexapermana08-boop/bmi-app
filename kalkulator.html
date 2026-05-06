@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
   <title>HealthSync | Kalkulator</title>
   <link rel="icon" type="image/webp" href="img/l1.webp">
   <link rel="stylesheet" href="style.css">
@@ -14,34 +14,43 @@
     <img src="img/l1.webp" alt="Logo" class="logo-img">
     <span class="logo-text">HealthSync</span>
   </div>
-  <button onclick="toggleTheme()" style="background: none; border: none; font-size: 24px; cursor: pointer;">🌙</button>
+  <button onclick="toggleTheme()" class="theme-btn" id="themeToggleBtn">🌙</button>
 </div>
 
 <div class="container">
   <div class="glass-card">
-    <h2 style="margin-bottom: 20px;">Kalkulator BMI</h2>
-    <p class="subtitle" style="margin-bottom: 20px; opacity:0.7;">Masukkan data dirimu</p>
+    <h2 style="margin-bottom: 8px;">Kalkulator BMI</h2>
+    <p style="margin-bottom: 24px; opacity: 0.7;">Masukkan data dirimu untuk mengetahui BMI</p>
     
     <div class="input-group">
-      <input type="text" id="nama" placeholder="Nama Lengkap">
+      <input type="text" id="nama" placeholder="Nama Lengkap" autocomplete="off">
     </div>
+    
     <div class="input-row">
-      <div class="input-group"><input type="number" id="umur" placeholder="Umur (tahun)"></div>
+      <div class="input-group">
+        <input type="number" id="umur" placeholder="Umur (tahun)" min="1" max="120">
+      </div>
       <div class="input-group">
         <select id="gender">
-          <option value="" disabled selected>Gender</option>
+          <option value="" disabled selected>Pilih Gender</option>
           <option value="Laki-laki">👨 Laki-laki</option>
           <option value="Perempuan">👩 Perempuan</option>
         </select>
       </div>
     </div>
+    
     <div class="input-row">
-      <div class="input-group"><input type="number" id="tinggi" placeholder="Tinggi (cm)"></div>
-      <div class="input-group"><input type="number" id="berat" placeholder="Berat (kg)"></div>
+      <div class="input-group">
+        <input type="number" id="tinggi" placeholder="Tinggi (cm)" step="1" min="50" max="250">
+      </div>
+      <div class="input-group">
+        <input type="number" id="berat" placeholder="Berat (kg)" step="0.1" min="10" max="300">
+      </div>
     </div>
+    
     <div class="btn-group">
       <button onclick="hitungBMI()" class="btn btn-primary">⚡ Hitung BMI</button>
-      <button onclick="simpanKeRiwayat()" class="btn btn-outline" id="btnSimpan" disabled>💾 Simpan</button>
+      <button onclick="simpanKeRiwayat()" class="btn btn-outline" id="btnSimpan" disabled>💾 Simpan Data</button>
     </div>
   </div>
 
@@ -52,6 +61,8 @@
   <a href="index.html" class="nav-item"><span>🏠</span><span>Home</span></a>
   <a href="kalkulator.html" class="nav-item active"><span>🧮</span><span>Kalkulator</span></a>
   <a href="riwayat.html" class="nav-item"><span>📊</span><span>Riwayat</span></a>
+  <a href="panduan.html" class="nav-item"><span>📖</span><span>Panduan</span></a>
+  <a href="artikel.html" class="nav-item"><span>📰</span><span>Artikel</span></a>
 </div>
 
 <script src="script.js"></script>
