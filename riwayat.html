@@ -3,54 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-  <title>HealthSync | Daftar</title>
+  <title>HealthSync | Riwayat</title>
   <link rel="icon" type="image/webp" href="img/l1.webp">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .register-container { max-width: 400px; margin: 0 auto; padding-top: 40px; }
-    .back-link { text-align: center; margin-top: 20px; }
-    .back-link a { color: var(--apple-blue); text-decoration: none; }
-  </style>
 </head>
-<body class="light">
+<body>
 
-<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div class="header">
+  <div class="logo">
+    <img src="img/l1.webp" alt="Logo" class="logo-img">
+    <span class="logo-text">HealthSync</span>
+  </div>
+  <button onclick="toggleTheme()" class="theme-btn" id="themeToggleBtn">🌙</button>
+</div>
 
-<div class="main-content">
-  <div class="register-container">
-    <div class="hero"><img src="img/l1.webp" alt="Logo" class="hero-logo"><h1>Daftar Akun</h1><p class="subtitle">Mulai perjalanan sehatmu</p></div>
-
-    <div class="glass-card">
-      <div class="form-group"><input type="text" id="regNama" placeholder="Nama Lengkap"></div>
-      <div class="form-group"><input type="email" id="regEmail" placeholder="Email"></div>
-      <div class="form-group"><input type="password" id="regPassword" placeholder="Password"></div>
-      <div class="form-group"><input type="password" id="regConfirm" placeholder="Konfirmasi Password"></div>
-      <button onclick="doRegister()" class="btn btn-primary">Daftar</button>
-      <div class="back-link"><a href="login.html">Sudah punya akun? Masuk</a></div>
-      <div class="back-link"><a href="index.html">← Kembali ke Beranda</a></div>
+<div class="container">
+  <div class="glass-card">
+    <div class="history-header">
+      <h2 style="font-size: 22px;">📜 Riwayat BMI</h2>
+      <button onclick="hapusSemua()" class="btn btn-outline" style="padding: 8px 16px;">🗑️ Hapus Semua</button>
     </div>
+    
+    <div id="jumlahData" class="badge-count" style="display: inline-block; margin-bottom: 20px;">0 data</div>
+    
+    <div id="emptyState" class="empty-state" style="display: none;">
+      <span>📭</span>
+      <p style="margin-top: 12px;">Belum ada data riwayat</p>
+      <small style="opacity: 0.6;">Silakan hitung BMI di halaman Kalkulator</small>
+    </div>
+    
+    <ul id="listRiwayat" class="riwayat-list"></ul>
   </div>
 </div>
 
-<script>
-function doRegister() {
-  const nama = document.getElementById('regNama').value.trim();
-  const email = document.getElementById('regEmail').value.trim();
-  const password = document.getElementById('regPassword').value;
-  const confirm = document.getElementById('regConfirm').value;
-  
-  if (!nama || !email || !password) return alert('Isi semua data!');
-  if (password !== confirm) return alert('Password tidak cocok!');
-  if (password.length < 4) return alert('Password minimal 4 karakter!');
-  
-  const users = JSON.parse(localStorage.getItem('users')) || [];
-  if (users.find(u => u.email === email)) return alert('Email sudah terdaftar!');
-  
-  users.push({ nama, email, password });
-  localStorage.setItem('users', JSON.stringify(users));
-  alert('Pendaftaran berhasil! Silakan login.');
-  window.location.href = 'login.html';
-}
-</script>
+<div class="bottom-nav">
+  <a href="index.html" class="nav-item"><span>🏠</span><span>Home</span></a>
+  <a href="kalkulator.html" class="nav-item"><span>🧮</span><span>Kalkulator</span></a>
+  <a href="riwayat.html" class="nav-item active"><span>📊</span><span>Riwayat</span></a>
+  <a href="panduan.html" class="nav-item"><span>📖</span><span>Panduan</span></a>
+  <a href="artikel.html" class="nav-item"><span>📰</span><span>Artikel</span></a>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
